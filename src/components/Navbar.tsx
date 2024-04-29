@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -9,9 +10,16 @@ const Navbar = () => {
           Secret Msg
         </a>
       </div>
-      <div className="navbar-end gap-4">
-        <a className="btn w-12 h-8 text-xs sm:w-20 sm:text-sm">Login</a>
-        <a className="btn btn-accent w-12 text-xs sm:w-20 sm:text-sm">Signup</a>
+      <div className="navbar-end gap-2">
+        <Link to="/login" className="btn w-12 h-8 text-xs sm:w-20 sm:text-sm">
+          Login
+        </Link>
+        <Link
+          to="/signup"
+          className="btn btn-accent w-12 text-xs sm:w-20 sm:text-sm"
+        >
+          Signup
+        </Link>
       </div>
     </div>
   );
