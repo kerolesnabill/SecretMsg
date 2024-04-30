@@ -1,10 +1,8 @@
 import { useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import api from "../api";
 
 const Login = () => {
-  const navigate = useNavigate();
-
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -23,7 +21,7 @@ const Login = () => {
       })
       .then((res) => {
         localStorage.setItem("token", res.data);
-        navigate("/");
+        window.location.assign("/");
       })
       .catch((err) => setError(err?.response?.data || "Unexpected error."))
       .finally(() => setIsLoading(false));
