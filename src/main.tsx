@@ -5,12 +5,14 @@ import App from "./App.tsx";
 import "./index.css";
 import Signup from "./routes/Signup.tsx";
 import Login from "./routes/Login.tsx";
+import Home from "./routes/Home.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      { index: true, element: <Home /> },
       { path: "/signup", element: <Signup /> },
       { path: "/login", element: <Login /> },
     ],
