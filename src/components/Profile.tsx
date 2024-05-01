@@ -4,9 +4,11 @@ import UserContext from "../context/UserContext";
 import shareIcon from "../assets/icons/share.svg";
 import copyIcon from "../assets/icons/copy.svg";
 import eyeIcon from "../assets/icons/eye.svg";
+import trashIcon from "../assets/icons/trash.svg";
 import api from "../api";
 import Overlay from "./Overlay";
 import Share from "./Share";
+import DeleteMsg from "./DeleteMsg";
 
 const Profile = () => {
   const contxet = useContext(UserContext);
@@ -15,6 +17,8 @@ const Profile = () => {
   const [messages, setMessages] = useState<[]>([]);
   const [error, setError] = useState();
   const [shareIsOpen, setShareIsOpen] = useState(false);
+  const [deleteMsgIsOpen, setDeleteMsgIsOpen] = useState(false);
+  const [deleteMsgId, setDeleteMsgId] = useState(0);
 
   useEffect(() => {
     api
@@ -71,11 +75,11 @@ const Profile = () => {
         <p className="text-center text-error text-lg mt-6">{error}</p>
         <div className="mt-20">
           <h3 className="text-center font-bold">
-            Your Messages ({messages.length})
+            Your Messages (<span id="messages-length">{messages.length}</span>)
           </h3>
           {messages && messages.length > 0 ? (
             messages.map((msg: any) => (
-              <div className="m-4 mt-8" id={msg.Id.toString()} key={msg.Id}>
+              <div className="m-4 mt-8" id={msg.Id} key={msg.Id}>
                 <p className="text-accent font-bold ml-2">
                   {new Intl.DateTimeFormat("en-US", {
                     year: "numeric",
@@ -85,7 +89,22 @@ const Profile = () => {
                     minute: "numeric",
                   }).format(new Date(msg.CreatedAt))}
                 </p>
-                <p className="bg-base-200 p-6 rounded-lg">{msg.Body}</p>
+                <div className="relative bg-base-200 p-6 rounded-lg">
+                  <p>{msg.Body}</p>
+                  <button
+                    onClick={() => {
+                      setDeleteMsgId(msg.Id);
+                      setDeleteMsgIsOpen(true);
+                    }}
+                    className=" absolute bottom-0 right-0 m-2"
+                  >
+                    <img
+                      className="w-4"
+                      src={trashIcon}
+                      alt="Delete message icon"
+                    />
+                  </button>
+                </div>
               </div>
             ))
           ) : (
@@ -95,6 +114,12 @@ const Profile = () => {
       </div>
       <Overlay isOpen={shareIsOpen} onClose={() => setShareIsOpen(false)}>
         <Share url={userUrl} />
+      </Overlay>
+      <Overlay
+        isOpen={deleteMsgIsOpen}
+        onClose={() => setDeleteMsgIsOpen(false)}
+      >
+        <DeleteMsg id={deleteMsgId} onClose={() => setDeleteMsgIsOpen(false)} />
       </Overlay>
     </>
   );
