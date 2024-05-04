@@ -8,7 +8,8 @@ interface IUser {
   bio: string;
   image: string;
   views: number;
-  notAvailable: boolean;
+  available: boolean;
+  showLastSeen: boolean;
   lastSeen: Date;
   createdAt: Date;
 }
