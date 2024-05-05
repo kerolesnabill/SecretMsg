@@ -42,7 +42,11 @@ const Profile = () => {
         </div>
         <div className="grid grid-cols-1 shadow-sm sm:grid-cols-2 p-4">
           <div className="w-56 md:w-64 mx-auto">
-            <img className="rounded-full" src={userImg} alt="User image" />
+            <img
+              className="rounded-full"
+              src={contxet?.user?.image || userImg}
+              alt="User image"
+            />
           </div>
           <div className="mt-8 text-center mx-auto sm:text-left sm:mx-0 md:mt-16">
             <p className="text-lg font-bold">{contxet?.user?.name}</p>

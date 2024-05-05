@@ -5,6 +5,7 @@ import ChangeName from "../components/ChangeName";
 import ChangeUsername from "../components/ChangeUsername";
 import ChangeBio from "../components/ChangeBio";
 import ChangeCheckbox from "../components/ChangeCheckbox";
+import ChangeImage from "../components/ChangeImage";
 
 const Settings = () => {
   const context = useContext(UserContext);
@@ -17,6 +18,7 @@ const Settings = () => {
   return (
     <div className="mx-auto max-w-screen-lg my-10">
       <h1 className="text-4xl font-bold my-6 text-center">Settings</h1>
+      <ChangeImage />
       <ChangeName />
       <ChangeUsername />
       <ChangeBio />
