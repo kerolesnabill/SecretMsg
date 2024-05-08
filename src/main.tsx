@@ -9,11 +9,13 @@ import Home from "./routes/Home.tsx";
 import Settings from "./routes/Settings.tsx";
 import ChangeEmail from "./routes/ChangeEmail.tsx";
 import ChangePassword from "./routes/ChangePassword.tsx";
+import ErrorPage from "./components/ErrorPage.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
       { path: "/signup", element: <Signup /> },
