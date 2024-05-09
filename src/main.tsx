@@ -10,6 +10,7 @@ import Settings from "./routes/Settings.tsx";
 import ChangeEmail from "./routes/ChangeEmail.tsx";
 import ChangePassword from "./routes/ChangePassword.tsx";
 import ErrorPage from "./components/ErrorPage.tsx";
+import User from "./routes/User.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
+      { path: "/:username", element: <User /> },
       { path: "/signup", element: <Signup /> },
       { path: "/login", element: <Login /> },
       { path: "/settings", element: <Settings /> },
