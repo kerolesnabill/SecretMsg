@@ -10,12 +10,19 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [user, setUser] = useState<NullableUser>(null);
 
+  const updateLastSeen = () => {
+    api.put("user/me/last-seen");
+  };
+
   useEffect(() => {
     api
       .get("/user/me")
-      .then((res) => setUser(res.data))
+      .then((res) => {
+        setUser(res.data);
+        updateLastSeen();
+      })
       .catch(() => {
-        localStorage.clear();
+        localStorage.removeItem("token");
         setUser(null);
       });
   }, []);

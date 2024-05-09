@@ -7,7 +7,7 @@ const Navbar = () => {
   const ctx = useContext(UserContext);
 
   const handleSignout = () => {
-    localStorage.clear();
+    localStorage.removeItem("token");
     ctx?.setUser(null);
     window.location.assign("/");
   };

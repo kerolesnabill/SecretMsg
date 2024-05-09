@@ -12,10 +12,21 @@ const User = () => {
   useEffect(() => {
     api
       .get(`user/${username}`)
-      .then((res) => setUser(res.data))
+      .then((res) => {
+        setUser(res.data);
+        updateUserViews(res.data.id);
+      })
       .catch()
       .finally(() => setIsLoading(false));
   }, []);
+
+  const updateUserViews = (id: number) => {
+    if (localStorage.getItem(id.toString())) return;
+
+    api
+      .put(`/user/update-views/${id}`)
+      .then(() => localStorage.setItem(id.toString(), "1"));
+  };
 
   const formRef = useRef<HTMLFormElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
