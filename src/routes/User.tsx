@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import api from "../api";
 import ErrorPage from "../components/ErrorPage";
 import { toast } from "react-toastify";
+import userImage from "../assets/user.jpg";
 
 const User = () => {
   const { username } = useParams();
@@ -66,7 +67,7 @@ const User = () => {
             <div className="w-40 md:w-56 mx-auto">
               <img
                 className="rounded-full"
-                src={user?.image}
+                src={user?.image || userImage}
                 alt="User image"
               />
               {user.lastSeen && (

@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import api from "./api";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer";
 
 function App() {
   const [user, setUser] = useState<NullableUser>(null);
@@ -32,9 +33,10 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <main className="container mx-auto px-4" id="detail">
+      <main className="container mx-auto px-4 min-h-[90vh]" id="detail">
         <Outlet />
       </main>
+      <Footer />
       <ToastContainer />
     </UserContext.Provider>
   );
