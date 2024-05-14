@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=600px height=150px src="../SecretMsg/src/assets/banner.png" alt="Banner"></a>
+ <img width=600px height=150px src="https://raw.githubusercontent.com/kerolesnabill/SecretMsg/main/src/assets/banner.png" alt="Banner"></a>
 </p>
 
 <h2 align="center">Secret Msg</h2>
@@ -35,7 +35,7 @@ Create your profile, invite others to share their thoughts, and receive anonymou
 4. Share your profile link with your friends
 5. Let other people send you anonymous messages
 
-![Demo](../SecretMsg/src/assets/demo.gif)
+![Demo](https://github.com/kerolesnabill/SecretMsg/blob/main/src/assets/demo.gif)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
