@@ -15,7 +15,7 @@
 - [Live Link](#live-link)
 - [Demo](#demo)
 - [Built Using](#built_using)
-- [API](#API)
+- [API](#api)
 
 ## 🧐 Descrpiton <a name = "descrpiton"></a>
 
@@ -45,6 +45,6 @@ Create your profile, invite others to share their thoughts, and receive anonymou
 - Tailwind CSS
 - Daisy UI
 
-## API <a name = "API"></a>
+## API <a name = "api"></a>
 
 API from [SecretMsgApi](https://github.com/kerolesnabill/SecretMsgApi) project
