@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=600px height=150px src="../SecretMsg/src/assets/banner.png" alt="Banner"></a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2 align="center">Secret Msg</h2>
 
-Currently, two official plugins are available:
+<p align="center"> Let others share their thoughts about you
+    <br> 
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Table of Contents
 
-## Expanding the ESLint configuration
+- [Descrpiton](#descrpiton)
+- [Live Link](#live-link)
+- [Demo](#demo)
+- [Built Using](#built_using)
+- [API](#API)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🧐 Descrpiton <a name = "descrpiton"></a>
 
-- Configure the top-level `parserOptions` property like this:
+Idea: If someone wants to tell you something without you knowing them.
+<br/>
+Create your profile, invite others to share their thoughts, and receive anonymous messages that spark insight or intrigue. Whether it's compliments, constructive criticism, or heartfelt confessions, discover what others truly think, all while safeguarding their anonymity.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## 🔗 Live Link <a name = "live-link"></a>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Link: [secretms.vercel.app](https://secretms.vercel.app/)
+
+## 🎥 Demo <a name = "demo"></a>
+
+1. Create an account / Sign Up
+2. Go to settings and add a picture for you
+3. Change the username
+4. Share your profile link with your friends
+5. Let other people send you anonymous messages
+
+![Demo](../SecretMsg/src/assets/demo.gif)
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- React
+- React Router Dom
+- Typescript
+- Tailwind CSS
+- Daisy UI
+
+## API <a name = "API"></a>
+
+API from [SecretMsgApi](https://github.com/kerolesnabill/SecretMsgApi) project
