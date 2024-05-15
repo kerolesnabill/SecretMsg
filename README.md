@@ -11,13 +11,13 @@
 
 ## 📝 Table of Contents
 
-- [Descrpiton](#descrpiton)
+- [Description](#description)
 - [Live Link](#live-link)
 - [Demo](#demo)
 - [Built Using](#built_using)
 - [API](#api)
 
-## 🧐 Descrpiton <a name = "descrpiton"></a>
+## 🧐 Description <a name = "description"></a>
 
 Idea: If someone wants to tell you something without you knowing them.
 <br/>
